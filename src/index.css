@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Medical Triage System Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Base colors - Medical green-white theme */
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    /* Primary - Medical green */
+    --primary: 142 69% 58%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Medical green variants */
+    --medical-green: 142 69% 58%;
+    --medical-green-light: 142 69% 85%;
+    --medical-green-dark: 142 69% 35%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 210 11% 15%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 210 11% 15%;
+
+    /* Triage Priority Colors */
+    --triage-red: 0 100% 50%;        /* Emergency - Critical */
+    --triage-red-bg: 0 100% 95%;
+    --triage-yellow: 45 100% 50%;     /* Urgent */
+    --triage-yellow-bg: 45 100% 95%;
+    --triage-green: 120 100% 35%;     /* Less Urgent */
+    --triage-green-bg: 120 100% 95%;
+    --triage-black: 0 0% 20%;         /* Deceased/Expectant */
+    --triage-black-bg: 0 0% 95%;
+
+    /* Status colors */
+    --status-waiting: 45 100% 50%;
+    --status-in-progress: 200 100% 50%;
+    --status-completed: 120 100% 35%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142 69% 58%;
+
+    --radius: 0.5rem;
+
+    /* Medical gradients */
+    --gradient-medical: linear-gradient(135deg, hsl(var(--medical-green)), hsl(var(--medical-green-dark)));
+    --gradient-triage-red: linear-gradient(135deg, hsl(var(--triage-red)), hsl(0 80% 40%));
+    --gradient-triage-yellow: linear-gradient(135deg, hsl(var(--triage-yellow)), hsl(40 90% 40%));
+    
+    /* Shadows */
+    --shadow-medical: 0 4px 20px hsl(var(--medical-green) / 0.15);
+    --shadow-triage: 0 2px 10px hsl(0 0% 0% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 11% 15%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 11% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 11% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 69% 58%;
+    --primary-foreground: 210 11% 15%;
+
+    /* Medical theme - dark mode */
+    --medical-green: 142 69% 58%;
+    --medical-green-light: 142 69% 75%;
+    --medical-green-dark: 142 69% 35%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142 69% 58%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
